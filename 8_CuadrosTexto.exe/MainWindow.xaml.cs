@@ -15,23 +15,18 @@ namespace _8_CuadrosTexto.exe
         public MainWindow()
         {
             InitializeComponent();
+            nombreTextBox.Tag = ayudaNombreTextBlock;
+            apellidoTextBox.Tag = ayudaApellidoTextBlock;
         }
 
-        private void nombreTextBox_KeyUp(object sender, KeyEventArgs e)
+        private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {
+            TextBox campo = sender as TextBox;
+            TextBlock tag = campo.Tag as TextBlock;
             if (e.Key == Key.F1)
             {
                 //Invierte la visibilidad 0 = Visible, 1 = Hidden
-                ayudaNombreTextBlock.Visibility = (Visibility)Math.Abs((int)ayudaNombreTextBlock.Visibility - 1);
-            }
-        }
-
-        private void apellidoTextBox_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.F1)
-            {
-                //Invierte la visibilidad 0 = Visible, 1 = Hidden
-                ayudaApellidoTextBlock.Visibility = (Visibility)Math.Abs((int)ayudaApellidoTextBlock.Visibility - 1);
+                tag.Visibility = (Visibility)Math.Abs((int)tag.Visibility - 1);
             }
         }
 

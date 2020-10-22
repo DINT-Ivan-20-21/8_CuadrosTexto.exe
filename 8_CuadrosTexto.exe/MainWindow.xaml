@@ -25,7 +25,7 @@
             Margin="40,56,0,0"
             TextWrapping="Wrap"
             Width="120"
-            KeyUp="nombreTextBox_KeyUp"/>
+            KeyUp="TextBox_KeyUp"/>
         <TextBlock
             x:Name="ayudaNombreTextBlock"
             VerticalAlignment="Top"
@@ -51,7 +51,7 @@
             Margin="40,127,0,0"
             TextWrapping="Wrap"
             Width="120"
-            KeyUp="apellidoTextBox_KeyUp"/>
+            KeyUp="TextBox_KeyUp"/>
         <TextBlock
             x:Name="ayudaApellidoTextBlock"
             VerticalAlignment="Top"
